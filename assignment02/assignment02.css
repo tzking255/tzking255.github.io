@@ -1,0 +1,19 @@
+#igottabeme {font-family: arial, helvetica, sans-serif;}
+.classy {margin-left: 10px;}
+div {margin-bottom: 50px;}
+span {width: 100px; height: 50px; padding-top: 5px; padding-bottom: 5px; padding-left: 20px; padding-right: 20px; border: 5px solid blue; background-color: yellow;}
+span.a {display: inline;}
+span.b {display: block;}
+span.c {display: inline-block;}
+#catposition {position: fixed; bottom: 0; right: 0;}
+#dogposition {position: relative; right: 50px; bottom: 150px;}
+.notused {background-color: orange;}
+#positionMe {position: relative;}
+#birdposition {position: absolute; top: 50px; left: 250px;}
+nav {position: fixed; top: 0; background-color: green; opacity: 90%; padding: 5px; font-size: 20px;}
+table.stripey th {background-color: black; color: white;}
+table.stripey tr:nth-child(odd) {background-color: white;}
+table.stripey tr:nth-child(even) {background-color: grey;}
+table.mousey td:hover {background-color: yellow;}
+table.rightey {text-align: right;}
+form.pinkey input:focus {background-color: pink;}
