@@ -1,0 +1,43 @@
+body {
+  background-color: #00a3dd;
+}
+
+nav {
+  background-color: black;
+  color: white;
+  padding: 20px;
+}
+nav a {
+  color: inherit;
+  padding: 5px;
+  display: inline-block;
+  text-decoration: none;
+}
+
+h1 {
+  text-align: center;
+}
+
+.container {
+  border: solid black;
+  text-align: center;
+  margin: 0 auto;
+  color: #fcd116;
+  text-decoration: none;
+}
+.container .row .col-sm-4 {
+  border: solid black;
+  padding: 40px;
+}
+.container .row .col-sm-4 a {
+  display: inline-block;
+  color: inherit;
+}
+.container .row .col-sm-4 a:hover {
+  color: green;
+}
+
+footer {
+  text-align: center;
+  padding: 40px;
+}
