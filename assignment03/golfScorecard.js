@@ -1,16 +1,14 @@
-
-
 // Get access to each row in the table so we can update the numbers. 
 getTheRows();
 
-
 /*****/
-
 
 // Get access to each row in the table so we can update the numbers. 
 function getTheRows() {
+
     // Initialize array of rows
     let tablerows =[];
+
     // Get all the rows in the array
     for(let i=1; i<=18; i++ )
     {
@@ -24,20 +22,46 @@ function getTheRows() {
         let plusButton = lastColumn.children[0];
         plusButton.onclick = function(){
             addOne(row);
+            addTotal();
         }
 
         // Get minus button in last column
         let minusButton = lastColumn.children[1];
         minusButton.onclick = function(){
             minusOne(row);
+            addTotal();
         }
-        console.log(i, plusButton, minusButton);
+        // Get a clear button in the last column
+        let clearButton = lastColumn.children[2];
+        clearButton.onclick = function(){
+            clear(row);
+            addTotal();
+        }
+
+        console.log(i, plusButton, minusButton, clearButton);
 
         // Add row to array
         tablerows.push(row);
     }
 }
 
+// add Total function
+function addTotal(){
+console.log('addTotal');
+let total = 0;
+    for(let i=1; i<=18; i++ ){
+        getElementById
+
+total = addOne + minusOne;
+let addTotal = lastColumn.children[1];
+let addTotal = lastColumn.children[2];
+
+    }
+
+
+
+
+}
 
 // add one to the score in row
 function addOne(row){
@@ -73,6 +97,20 @@ function addOne(row){
     updateTotal();
 }
 
+// add one to the score in row
+function clear(row){
+    console.log('addOne');
+
+    // Get score box. 
+    let scoreBox = row.children[2];
+    // Get over box. 
+    let overBox = row.children[3];
+scoreBox.innerHTML = '-';
+overBox.innerHTML = '-'
+
+    // Update total
+    updateTotal();
+}
 
 
 // Subtract one to the score in row
