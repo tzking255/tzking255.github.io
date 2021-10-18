@@ -152,11 +152,10 @@ function updateTotal() {
         if(scoreValue != "-") {
             totalScore += Number(scoreValue);
         }
-        if(totalValue != "-") {
-            totalOver += Number(totalOver);
+        if(overValue != "-") {
+            totalOver += Number(overValue);
         }
-        // Add over
-        totalOver += overValue;
+
     }
 
     totalsRow.children[1].innerHTML = totalPar;
