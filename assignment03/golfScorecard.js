@@ -22,20 +22,17 @@ function getTheRows() {
         let plusButton = lastColumn.children[0];
         plusButton.onclick = function(){
             addOne(row);
-            addTotal();
         }
 
         // Get minus button in last column
         let minusButton = lastColumn.children[1];
         minusButton.onclick = function(){
             minusOne(row);
-            addTotal();
         }
         // Get a clear button in the last column
         let clearButton = lastColumn.children[2];
         clearButton.onclick = function(){
             clear(row);
-            addTotal();
         }
 
         console.log(i, plusButton, minusButton, clearButton);
@@ -44,25 +41,6 @@ function getTheRows() {
         tablerows.push(row);
     }
 }
-
-// add Total function
-function addTotal(){
-console.log('addTotal');
-let total = 0;
-    for(let i=1; i<=18; i++ ){
-        getElementById
-
-total = addOne + minusOne;
-let addTotal = lastColumn.children[1];
-let addTotal = lastColumn.children[2];
-
-    }
-
-
-
-
-}
-
 // add one to the score in row
 function addOne(row){
     console.log('addOne');
@@ -153,7 +131,7 @@ function minusOne(row){
 // Update total
 function updateTotal() {
     // Get totals row
-    let totalsRow = document.getElementById(19);
+    let totalsRow = document.getElementById("totals");
 
     // Initialize the totals to zero 
     let totalPar = 0;
@@ -162,18 +140,29 @@ function updateTotal() {
 
     // Accumulate the totals
     for(let i=1 ; i<=18 ; i++) {
+        let row = document.getElementById(i);
         // Get score
-        let scoreValue = scoreBox.innerHTML;
+        let scoreValue = row.children[2].innerHTML;
         // Get over
-        let overValue = overBox.innerHTML;
+        let overValue = row.children[3].innerHTML;
 
         // Add par
         totalPar += 4;
         // Add score
-        totalScore += scoreValue;
+        if(scoreValue != "-") {
+            totalScore += Number(scoreValue);
+        }
+        if(totalValue != "-") {
+            totalOver += Number(totalOver);
+        }
         // Add over
         totalOver += overValue;
     }
+
+    totalsRow.children[1].innerHTML = totalPar;
+    totalsRow.children[2].innerHTML = totalScore;
+    totalsRow.children[3].innerHTML = totalOver;
+
     console.log('totalPar',totalPar);
     console.log('totalScore',totalScore);
     console.log('totalOver',totalOver);
