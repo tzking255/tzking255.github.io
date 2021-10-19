@@ -8,11 +8,24 @@
   </head>
   <body>
     <style>
+      body {
+        touch-action: manipulation;
+      }
       a {
         text-align: center;
         font-size: 4rem;
         text-decoration: none;
         display: block;
+        position: relative;
+      }
+      a.def:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #0008;
       }
       img {
         width: 750px;
@@ -22,10 +35,10 @@
         display: block;
       }
     </style>
-    <a href="golfScorecard.html">Golf Score Card</a>
+    <a class="abc" href="golfScorecard.html">Golf Score Card</a>
 
-    <a href="images/assignment03.png">
-      <img src="images/assignment03.png" alt="Image of a Golf Score Board"
+    <a class="def" href="images/gsc.png">
+      <img src="images/gsc.png" alt="Image of a Golf Score Board"
     /></a>
   </body>
 </html>
