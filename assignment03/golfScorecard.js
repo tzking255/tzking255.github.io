@@ -114,11 +114,16 @@ function minusOne(row){
         
         // decrement score value
         scoreValue--;
+        if(scoreValue<0) scoreValue = 0;
         let overValue = scoreValue-4;
 
         // Show new value on page
-        scoreBox.innerHTML = scoreValue;
+        if(scoreValue>=0) scoreBox.innerHTML = scoreValue;
+        else scoreBox.innerHTML = '-';
+
+        // Show new value on page
         if(overValue>=0) overBox.innerHTML = overValue;
+        else overBox.innerHTML = '-';
     }
 
     // Update total
