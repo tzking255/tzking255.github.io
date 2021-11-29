@@ -1,0 +1,9 @@
+td,
+th,
+td input {
+  text-align: right;
+}
+
+#loan_table {
+  background-color: pink;
+}
